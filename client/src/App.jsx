@@ -22,6 +22,8 @@ const App = () => {
         return;
       }
 
+      console.log(window.location.href);
+
       const { data } = await axios.get(`${window.location.href}/api/lyrics`, {
         params: {
           query,

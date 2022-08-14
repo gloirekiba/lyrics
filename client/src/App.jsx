@@ -10,10 +10,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  console.log(
-    window.location.origin ? window.location.origin : window.location.href
-  );
-
   const getLyrics = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -26,11 +22,14 @@ const App = () => {
         return;
       }
 
-      const { data } = await axios.get(`${window.location.origin}/api/lyrics`, {
-        params: {
-          query,
-        },
-      });
+      const { data } = await axios.get(
+        `https://open-lyrics.herokuapp.com/api/lyrics`,
+        {
+          params: {
+            query,
+          },
+        }
+      );
 
       setLyrics(data.lyrics);
       setLoading(false);

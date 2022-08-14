@@ -15,9 +15,9 @@ const App = () => {
     setLoading(true);
     setLyrics("");
     setError("");
+
     try {
       if (query.length === 0) {
-        setLyrics("");
         setLoading(false);
         return;
       }
@@ -43,7 +43,7 @@ const App = () => {
         <Input
           onChange={(e) => setQuery(e.target.value)}
           type="text"
-          placeholder="Search lyrics"
+          placeholder="Search song"
           value={query}
         />
         <Button type="submit">Search</Button>
@@ -89,6 +89,7 @@ const Button = styled.button`
   border-radius: 5px;
   background-color: #000;
   color: #fff;
+  font-weight: 500;
   font-size: 2rem;
   margin-left: 1em;
   cursor: pointer;

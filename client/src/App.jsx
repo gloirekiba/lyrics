@@ -1,6 +1,7 @@
 import axios from "axios";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
+
 import Loader from "./components/Loader";
 import Alert from "./components/Alert";
 

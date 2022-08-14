@@ -22,14 +22,11 @@ const App = () => {
         return;
       }
 
-      const { data } = await axios.get(
-        `https://open-lyrics.herokuapp.com/api/lyrics`,
-        {
-          params: {
-            query,
-          },
-        }
-      );
+      const { data } = await axios.get(`/api/lyrics`, {
+        params: {
+          query,
+        },
+      });
 
       setLyrics(data.lyrics);
       setLoading(false);

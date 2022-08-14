@@ -10,6 +10,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  console.log(10);
+
   const getLyrics = async (e) => {
     e.preventDefault();
     setLoading(true);

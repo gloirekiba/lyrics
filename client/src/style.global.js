@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
+  body {
+    font-family: "Poppins", "Open Sans Condensed";
+  }
+
   :root { font-size: 62.5%; }
 
 `;

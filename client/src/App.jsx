@@ -49,7 +49,11 @@ const App = () => {
         />
         <Button type="submit">Search</Button>
       </Form>
-      {error && <Alert type="danger">{error}</Alert>}
+      {error && (
+        <Alert type="danger" center>
+          {error}
+        </Alert>
+      )}
       {loading ? <Loader center /> : <Lyrics>{lyrics}</Lyrics>}
     </Container>
   );

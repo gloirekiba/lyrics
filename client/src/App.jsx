@@ -10,7 +10,9 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  console.log(window.location.origin);
+  console.log(
+    window.location.origin ? window.location.origin : window.location.href
+  );
 
   const getLyrics = async (e) => {
     e.preventDefault();

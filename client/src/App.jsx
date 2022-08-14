@@ -40,15 +40,17 @@ const App = () => {
 
   return (
     <Container>
-      <Form onSubmit={(e) => getLyrics(e)}>
-        <Input
-          onChange={(e) => setQuery(e.target.value)}
-          type="text"
-          placeholder="Search song"
-          value={query}
-        />
-        <Button type="submit">Search</Button>
-      </Form>
+      <Header>
+        <Form onSubmit={(e) => getLyrics(e)}>
+          <Input
+            onChange={(e) => setQuery(e.target.value)}
+            type="text"
+            placeholder="Search song"
+            value={query}
+          />
+          <Button type="submit">Search</Button>
+        </Form>
+      </Header>
       {error && (
         <Alert type="danger" center>
           {error}
@@ -58,6 +60,19 @@ const App = () => {
     </Container>
   );
 };
+
+const Header = styled.header`
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
 
 const Container = styled.div`
   width: 95%;
@@ -69,7 +84,6 @@ const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em auto;
   max-width: 500px;
 
   @media (max-width: 500px) {

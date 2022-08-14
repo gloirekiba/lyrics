@@ -10,6 +10,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  console.log(window.location.origin);
+
   const getLyrics = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -21,8 +23,6 @@ const App = () => {
         setLoading(false);
         return;
       }
-
-      console.log(window.location.origin);
 
       const { data } = await axios.get(`${window.location.origin}/api/lyrics`, {
         params: {

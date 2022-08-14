@@ -12,8 +12,22 @@
 [https://open-lyrics.herokuapp.com/](https://open-lyrics.herokuapp.com/)
 
 
+## Embed the api in your apps
 
+```js
 
+const API = "https://open-lyrics.herokuapp.com/api/lyrics"
+const query = "Never Gonna Give You Up"
+
+const { data } = await axios.get(API, {
+    params: {
+      query,
+    },
+  });
+
+console.log(data.lyrics)
+
+```
 
 ## Screenshots
 

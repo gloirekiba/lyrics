@@ -9,6 +9,7 @@ const lyricsRoute = require("./routes/lyrics.route");
 
 const app = express();
 
+app.use(express.static(path.resolve(__dirname, "client", "build")));
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

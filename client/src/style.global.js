@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
   body {
+    padding-top: 10em;
     font-family: "Poppins", "Open Sans Condensed";
   }
 

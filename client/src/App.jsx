@@ -10,8 +10,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  console.log(10);
-
   const getLyrics = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -68,6 +66,10 @@ const Form = styled.form`
   justify-content: center;
   margin: 1em auto;
   max-width: 500px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Input = styled.input`
@@ -90,6 +92,10 @@ const Button = styled.button`
   font-size: 2rem;
   margin-left: 1em;
   cursor: pointer;
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: 0.5em 0;
+  }
 `;
 
 const Lyrics = styled.div`

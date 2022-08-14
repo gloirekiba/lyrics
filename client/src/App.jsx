@@ -22,7 +22,7 @@ const App = () => {
         return;
       }
 
-      const { data } = await axios.get(`/api/lyrics`, {
+      const { data } = await axios.get(`${window.location.href}/api/lyrics`, {
         params: {
           query,
         },

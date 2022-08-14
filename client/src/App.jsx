@@ -22,9 +22,9 @@ const App = () => {
         return;
       }
 
-      console.log(window.location.href);
+      console.log(window.location.origin);
 
-      const { data } = await axios.get(`${window.location.href}/api/lyrics`, {
+      const { data } = await axios.get(`${window.location.origin}/api/lyrics`, {
         params: {
           query,
         },
